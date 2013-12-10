@@ -2,10 +2,6 @@ body {
 	background: #000;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
-
-	&.ng-cloak {
-		display: none;
-	}
 }
 
 .logo {
@@ -98,7 +94,8 @@ body {
 			width: 50%;
 			background: #EfEfEf;
 			margin: 50px auto;
-			height: 400px;
+			min-height: 400px;
+			height:auto;
 			h2 {
 				font-weight: bold;
 			}
@@ -129,15 +126,83 @@ footer {
 	margin: 10px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-.section-heading {
-	font-size: 2em;
-}
+	html,body {
 
-.section {
-	padding-top: 25px;
-	padding-bottom: 25px;
-}
+		height: 100%;
+
+		.search {
+			text-align: center;
+			position: fixed;
+			z-index: 1;
+			background: black;
+			width: 100%;
+			padding: 9px 20px;
+			form {
+				margin-top: 0px;
+			}
+		}
+
+		.map {
+			height: 100%;
+			.detail {
+				height: 100%;
+				.message {
+					border-radius: 0px;
+					border: 0;
+					width: 100%;
+					background: #EfEfEf;
+					height: 100%;
+					margin: 0;
+					padding: 0 35px;
+					.close {
+						background: url('img/google-maps-icon.jpg') no-repeat;
+						position: fixed;
+						z-index: 2;
+						width: 150px;
+						height: 107px;
+						right: 10px;
+						top: 10px;
+						border: 1px solid;
+						background-size: 144px;
+						background-position: 0;
+					}
+					dl {
+						font-size: 1.5em;
+						dd {
+							margin-bottom: 15px;
+						}
+					}
+					h2 {
+						font-weight: bold;
+						text-align: center;
+						font-size: 2.8em;
+					}
+					h4 {
+						text-align: center;
+					}
+					address{
+						margin-bottom: 0;
+					}
+					.links {
+						font-size: 40px;
+						margin-top: 10px;
+						text-align: right;
+					}
+					img {
+
+						border-radius: 6px;
+						border: 2px solid #ccc;
+					}
+
+				}
+
+			}
+			#map-canvas {
+				height: 100%;
+			}
+		}
+	}
 
 }
